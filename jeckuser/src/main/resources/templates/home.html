@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>홈</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .home-card {
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      width: 360px;
+    }
+
+    .home-card h1 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #333333;
+    }
+
+    .logout-btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background-color: #ff5c5c;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .logout-btn:hover {
+      background-color: #e04b4b;
+    }
+  </style>
+</head>
+<body>
+  <div class="home-card">
+    <h1>안녕하세요, <span th:text="${username}">사용자</span>님!</h1>
+    <a class="logout-btn" href="/logout">로그아웃</a>
+  </div>
+</body>
+</html>
